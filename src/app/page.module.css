@@ -17,7 +17,6 @@
   margin: 3rem;
   border: 2rem solid var(--primary);
 }
-
 /*@media (prefers-color-scheme: dark) {*/
 /*  .page {*/
 /*    --gray-rgb: 255, 255, 255;*/
@@ -91,9 +90,62 @@
 .projects h3 {
 }
 
-.projects ul {
-  list-style: none;
-  text-align: center;
+.pItem {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.pText {
+  overflow: hidden;
+  width: 100%;
+}
+
+.pText p {
+  position: sticky;
+}
+
+/*.pSlide {*/
+/*  !*animation-delay: 0.1s;*!*/
+/*  animation-duration: 0.2s;*/
+/*  animation-name: slide;*/
+/*  animation-iteration-count: 1;*/
+/*  animation-timing-function: ease-in ;*/
+/*  animation-fill-mode: forwards;*/
+/*  !*animation: 0.5s sliding 0.7s linear;*!*/
+/*  !*animation-play-state: paused;*!*/
+/*}*/
+
+.slideDown {
+  /*display: block;*/
+  /*top: -100%;*/
+  /*max-width: ;*/
+  justify-content: start;
+  animation-duration: 0.2s;
+  animation-name: slideDown;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in ;
+  animation-fill-mode: forwards;
+}
+
+.slideUp {
+  /*display: block;*/
+  justify-content: start;
+  animation-duration: 0.2s;
+  animation-name: slideUp;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in ;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideUp {
+  0% {transform: translateY(0)}
+  100% {transform: translateY(-100%)}
+}
+
+@keyframes slideDown {
+  0% {transform: translateY(-100%)}
+  100% {transform: translateY(0)}
+
 }
 
 .ctas {
